@@ -1,0 +1,134 @@
+.contact-section {
+    position: relative;
+    width: 100%;
+    height: 374px;
+    background: url("/assets/background-contact.jpg") no-repeat center/cover;
+    box-shadow: inset 200px 200px 200px 200px #603709d0;
+    display: flex;
+    overflow-x: visible;
+    justify-content: space-between;
+    align-items: center;    
+  }
+  .contact-section h1 {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-left: 90px;
+  }
+  .contact-section p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: center;
+    width: 584px;
+    margin-top: 8px;
+    margin-left: 90px;
+  }
+  .contact-section img {
+    position: absolute;
+    right: 0;
+    top: -80px;
+    width: 526px;
+    height: 432px;
+  }
+  
+  .subscribe-box {
+    display: flex;
+    width: 655px;
+    height: 66px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    margin-left: 90px;
+  }
+  
+  .subscribe-input {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #fef7ee;
+    color: #5c4433;
+  }
+  
+  .subscribe-btn {
+    background-color: #f6b13e;
+    color: #3d2206;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: #e89d23;
+  }
+  
+  .subscribed-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    background-color: #fef7ee;
+  }
+  
+  .subscribed-info span {
+    font-size: 18px;
+    color: #5c4433;
+    font-weight: 500;
+  }
+  
+  .cancel-btn {
+    color: #3d2206;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #970303;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-btn:hover {
+    color: #fef7ee;
+    background-color: #690101;
+    border: none;
+  }
+  
+  .subscription-message {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 90px;
+    width: 655px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .success-message {
+    background-color: rgba(2, 63, 4, 0.8);
+    color: #fef7ee;
+  }
+  
+  .error-message {
+    background-color: rgba(244, 67, 54, 0.445);
+    color: #fef7ee;
+  }
+  
+  .info-message {
+    background-color: rgba(36, 16, 3, 0.8);
+    color: #fef7ee;
+  }
+  
+  .subscription-message.fade-out {
+    opacity: 0;
+  }

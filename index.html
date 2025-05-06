@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bean Scene</title>
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/menu.css">
+  <link rel="stylesheet" href="styles/global.css">
+   <link rel="stylesheet" href="styles/buttons.css">
+   <link rel="stylesheet" href="styles/table-pg.css">
+   <link rel="stylesheet" href="styles/coffee-cup-pg.css">
+   <link rel="stylesheet" href="styles/feedbacks-pg.css">
+   <link rel="stylesheet" href="styles/contact-pg.css">
+   <link rel="stylesheet" href="styles/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Bean Scene</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="btn-header">Order Now</a>
+  </header>
+  <main>
+    <section class="home">
+        <div class="content">
+          <p class="tagline">We've got your morning covered with</p>
+          <h1 class="title">Coffee</h1>
+          <p class="description">
+            It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our customers.
+          </p>
+          <a href="#" class="btn-main">Order Now</a>
+        </div>
+      </section>
+    
+      <section class="section-discover">
+        <div class="discover-container">
+          <div class="discover-text">
+            <h2>Discover the best coffee</h2>
+            <p>
+              Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood.
+              Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more
+              than others you have ever tasted.
+            </p>
+            <a href="#" class="btn-learn">Learn More</a>
+          </div>
+          <div class="discover-image">
+            <img src="/assets/stylized-cup-coffee-out-coffee-beans-flat-lay 1.svg" alt="Coffee beans heart" />
+            <div class="image-content">
+                <img src="assets/coffee_blast.svg" alt="Coffee Beans Heart"/>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <h1 class="coffee-color section-title menu-title">
+          Enjoy a new blend of coffee style
+        </h1>
+        <p class="section-description gray-text p-order-list">
+          Explore all flavours on our menu with us. There is always a new worth
+          experiencing
+        </p>
+        <div class="menu-items"><div class="menu-item">
+              <li>
+                  <img src="/assets/Rectangle 7.svg" alt="Cold Brew Coconut">
+                  <h1 class="coffee-color menu-title" id="coffee-title">
+                    Cappuccino
+                  </h1>
+                  <p class="gray-text" id="coffee-description">
+                    Coffee 35% | Milk 65%
+                  </p>
+                  <p class="coffee-color" id="coffee-price">R$2.50</p>
+                  <button class="main-button" id="order-btn">Order now</button>
+              </li>
+          </div><div class="menu-item">
+              <li>
+                  <img src="/assets/Rectangle 9.svg" alt="Matcha Latte">
+                  <h1 class="coffee-color menu-title" id="coffee-title">
+                    Chai Latte
+                  </h1>
+                  <p class="gray-text" id="coffee-description">
+                    Tea 30% | Milk 70%
+                  </p>
+                  <p class="coffee-color" id="coffee-price">R$5.50</p>
+                  <button class="main-button" id="order-btn">Order now</button>
+              </li>
+          </div><div class="menu-item">
+              <li>
+                  <img src="/assets/Rectangle 11.svg" alt="Hazelnut Cold Foam Brew">
+                  <h1 class="coffee-color menu-title" id="coffee-title">
+                      Macchiato
+                  </h1>
+                  <p class="gray-text" id="coffee-description">
+                    Coffee 65% | Milk 35%
+                  </p>
+                  <p class="coffee-color" id="coffee-price">R$5.99</p>
+                  <button class="main-button" id="order-btn">Order now</button>
+              </li>
+          </div><div class="menu-item">
+              <li>
+                  <img src="/assets/Rectangle 13.svg">
+                  <h1 class="coffee-color menu-title" id="coffee-title">
+                      Espresso
+                  </h1>
+                  <p class="gray-text" id="coffee-description">
+                    Coffee 35% | Milk 65%
+                  </p>
+                  <p class="coffee-color" id="coffee-price">R$1.99</p>
+                  <button class="main-button" id="order-btn">Order now</button>
+              </li>
+          </div></div>
+      </section>
+
+      <section class="table-section">
+        <div class="table-container">
+          <div class="table-filters"><button class="main-button active" id="filter-btn">All Items</button><button class="main-button" id="filter-btn">Hot Beverage</button><button class="main-button" id="filter-btn">Bakery</button><button class="main-button" id="filter-btn">Cold Beverage</button><button class="main-button" id="filter-btn">Savory Snack</button><button class="main-button" id="filter-btn">Snack</button></div>
+          <div>
+            <table class="table coffee-color">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Type</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody class="table-body"><tr>
+              <td>Espresso</td>
+              <td>Hot Beverage</td>
+              <td>R$ 2.50</td>
+          </tr><tr>
+              <td>Cappuccino</td>
+              <td>Hot Beverage</td>
+              <td>R$ 3.20</td>
+          </tr><tr>
+              <td>Blueberry Muffin</td>
+              <td>Bakery</td>
+              <td>R$ 2.80</td>
+          </tr><tr>
+              <td>Cold Brew Coconut</td>
+              <td>Cold Beverage</td>
+              <td>R$ 3.90</td>
+          </tr><tr>
+              <td>Ham &amp; Cheese Croissant</td>
+              <td>Savory Snack</td>
+              <td>R$ 4.20</td>
+          </tr><tr>
+              <td>Matcha Latte</td>
+              <td>Hot Beverage</td>
+              <td>R$ 3.75</td>
+          </tr><tr>
+              <td>Iced Caramel Macchiato</td>
+              <td>Cold Beverage</td>
+              <td>R$ 4.50</td>
+          </tr><tr>
+              <td>Vegan Chocolate Brownie</td>
+              <td>Bakery</td>
+              <td>R$ 3.00</td>
+          </tr><tr>
+              <td>Turkey &amp; Avocado Sandwich</td>
+              <td>Savory Snack</td>
+              <td>R$ 5.20</td>
+          </tr><tr>
+              <td>Chai Latte</td>
+              <td>Hot Beverage</td>
+              <td>R$ 3.60</td>
+          </tr><tr>
+              <td>Hazelnut Cold Foam Brew</td>
+              <td>Cold Beverage</td>
+              <td>R$ 4.10</td>
+          </tr><tr>
+              <td>Classic Donut</td>
+              <td>Bakery</td>
+              <td>R$ 1.80</td>
+          </tr><tr>
+              <td>Fruit Parfait</td>
+              <td>Snack</td>
+              <td>R$ 3.90</td>
+          </tr><tr>
+              <td>Iced Hibiscus Tea</td>
+              <td>Cold Beverage</td>
+              <td>R$ 3.30</td>
+          </tr><tr>
+              <td>Pumpkin Spice Latte</td>
+              <td>Hot Beverage</td>
+              <td>R$ 4.60</td>
+          </tr></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="coffee-section">
+        <div class="coffee-content">
+          <h1>Get a chance to have an Amazing morning</h1>
+          <p>
+            We are giving you are one time opportunity to experience a better
+            life with coffee.
+          </p>
+          <button class="main-button">Order Now</button>
+        </div>
+        <div class="coffee-image">
+          <img src="/assets/cup.svg" alt="Coffee Cup">
+        </div>
+      </section>
+      <section class="feedback-section">
+        <div>
+          <div>
+            <h1 class="coffee-color section-title">
+              Our coffee perfection feedback
+            </h1>
+            <p class="section-description gray-text">
+              Our customers has amazing things to say about us
+            </p>
+          </div>
+          <div class="feedback-content">
+            <img src="/assets/coffee_blast.png" alt="splash1" id="splash-img1">
+            <button class="main-button" id="left-btn-feedback">
+              <img src="/assets/VECTOR-RIGHT.svg" alt="Previous">
+            </button>
+            <div>
+              <img src="/assets/aspas.png" alt="aspas" id="aspas-img">
+            </div>
+            <p class="gray-text feedback-text">Tried the Hazelnut Cold Foam Brew for the first time—super smooth and not too sweet. Great for editing sessions!</p>
+            <h1 class="coffee-color feedback-name">Tomás Ribeiro</h1>
+            <p class="gray-text feedback-role">Photographer</p>
+            <div class="feedback-img">
+              <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Tomás Ribeiro">
+            </div>
+            <button class="main-button" id="right-btn-feedback">
+              <img src="/assets/Vector.svg" alt="Next">
+            </button>
+            <img src="/assets/coffee_blast.png" alt="splash2" id="splash-img2">
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-div">
+          <div>
+            <h1>Subscribe to get offers!</h1>
+            <p>Don't miss out on our latest news, updates, tips and special offers</p>
+          </div>
+          <div class="subscribe-box">
+            <input type="email" placeholder="Enter your mail" class="subscribe-input">
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
+          <img src="assets/pngwing 1.png" alt="coffee-cup2">
+      </div></section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <a href="#"><h2 class="logo">Bean Scene</h2></a>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book.
+        </p>
+        <div class="socials">
+          <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+          <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+          <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter"></a>
+          <a href="https://www.youtube.com" target="_blank" class="fab fa-youtube"></a>
+        </div>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li>About Us</li>
+          <li>Our Menu</li>
+          <li>Shop</li>
+          <li>News &amp; Blogs</li>
+          <li>Help &amp; Supports</li>
+        </ul>
+      </div>
+
+      <div class="footer-section company">
+        <h3>Company</h3>
+        <ul>
+          <li>How we work</li>
+          <li>Terms of service</li>
+          <li>Pricing</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p>Akshya Nagar 1st Block 1st Cross,<br>Ramamurthy nagar, Bangalore-560016</p>
+        <p>+1 202-918-2132</p>
+        <p>beanscene@mail.com</p>
+        <p>www.beanscene.com</p>
+      </div>
+    </div>
+  </footer>
+<script src="scripts/index.js"></script>
+</body>
+</html>
+
+

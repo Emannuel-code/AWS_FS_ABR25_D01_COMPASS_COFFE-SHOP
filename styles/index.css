@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+  background: url('/assets/bg-overlay.svg') no-repeat center center/cover;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+    font-family: "Clicker Script", cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcf77;
+}
+
+.btn-header {
+  background-color: #ffcf77;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #000;
+  transition: background 0.3s;
+}
+
+.btn-header:hover {
+  background-color: #f1b963;
+}
+
+.home {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.title {
+    font-family: "Clicker Script", cursive;
+    font-style: normal;
+    font-size: 12.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn-main {
+  background-color: #ffcf77;
+  color: #000;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-main:hover {
+  background-color: #f1b963;
+}
+
+.section-discover {
+    padding: 80px 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .discover-container {
+    max-width: 1200px;
+    height: 45vh;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .discover-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .discover-text h2 {
+    font-size: 54px;
+    font-weight: 700;
+    color: #5c3a1a;
+    margin-bottom: 20px;
+  }
+  
+  .discover-text p {
+    color: #707070;
+    line-height: 1.8;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .btn-learn {
+    background-color: #f8b84e;
+    color: #000;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn-learn:hover {
+    background-color: #e6a63e;
+  }
+  
+  .discover-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    position: relative;
+  }
+  
+  .discover-image img:first-child {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 200px;
+    z-index: 2;
+  }
+  
+  .image-content {
+    position: absolute;
+    bottom: -140px;   
+    left: -189%;        
+    width: 70%;   
+    z-index: 0;      
+  }
+  
+  .image-content img {
+    width: 30%;
+  }
+  
+
+  
+  
