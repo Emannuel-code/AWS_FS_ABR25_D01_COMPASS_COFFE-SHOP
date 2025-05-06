@@ -31,7 +31,7 @@ To view the project locally:
 Clone the repository:
 
 bash
-git clone https://github.com/yourusername/coffee-shop-landing-page.git
+git clone git@github.com:Emannuel-code/AWS_FS_ABR25_D01_COMPASS_COFFE-SHOP.git
 Navigate to the project folder:
 
 bash
