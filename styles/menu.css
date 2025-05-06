@@ -75,3 +75,126 @@
     margin-bottom: 6px;
     margin-top: 14px;
   }
+
+
+  @media (max-width: 1024px) {
+    .menu {
+      padding: 0 40px;
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .menu-items {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  
+    .menu-item {
+      flex-direction: column;
+    }
+  
+    .menu-title {
+      font-size: 42px;
+      text-align: center;
+    }
+  
+    .p-order-list {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .menu {
+      padding: 0 20px;
+      height: auto;
+    }
+  
+    .menu-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-item li {
+      width: 100%;
+      max-width: 320px;
+    }
+  
+    .menu-item li img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .menu-title {
+      font-size: 32px;
+    }
+  
+    .p-order-list {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .menu {
+      padding: 20px 10px;
+      height: auto;
+      flex-direction: column;
+    }
+  
+    .menu-title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+  
+    .p-order-list {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .menu-items {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .menu-item {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      height: 30%;
+    }
+  
+    .menu-item li {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      padding-bottom: 15px;
+    }
+  
+    .menu-item li img {
+      width: 100%;
+      height: auto;
+    }
+  
+    #coffee-title {
+      font-size: 18px;
+      margin: 10px 0 4px;
+      text-align: center;
+    }
+  
+    #coffee-description {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+  
+    #coffee-price {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }

@@ -132,3 +132,123 @@
   .subscription-message.fade-out {
     opacity: 0;
   }
+
+
+  @media (max-width: 768px) {
+    .contact-section h1 {
+      font-size: 2rem;
+    }
+  
+    .contact-section p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .subscribe-box {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .subscribe-input,
+    .subscribe-btn {
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+    }
+  
+    .subscribe-btn {
+      border-top: 1px solid #ccc;
+    }
+  
+    .contact-section img {
+      top: 0;
+      position: relative;
+    }
+  
+    .subscription-message {
+      font-size: 0.95rem;
+    }
+  
+    .subscribed-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cancel-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 90px 75px;
+      height: auto;
+    }
+  
+    .contact-section h1 {
+      font-size: 51px;
+      margin: 0 0 40px;
+    }
+  
+    .contact-section p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0 auto 20px;
+      width: 100%;
+    }
+  
+    .contact-section img {
+      display: none;
+    }
+  
+    .subscribe-box {
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      margin: 20px auto 0;
+      height: auto;
+    }
+  
+    .subscribe-input,
+    .subscribe-btn {
+      width: 100%;
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .subscribe-btn {
+      border-top: 1px solid #ccc;
+    }
+  
+    .subscription-message {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.9rem;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .subscribed-info {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .subscribed-info span {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  
+    .cancel-btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }

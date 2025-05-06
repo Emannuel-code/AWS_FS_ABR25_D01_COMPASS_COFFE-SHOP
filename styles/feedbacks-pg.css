@@ -103,3 +103,116 @@
     width: 514px;
     height: 226px;
   }
+
+
+  @media (max-width: 1024px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+  
+    .feedback-name {
+      font-size: 1.75rem;
+    }
+  
+    .feedback-role {
+      font-size: 1rem;
+    }
+  
+    .feedback-text {
+      font-size: 1rem;
+      margin: 50px 20px 0 20px;
+    }
+  
+    #left-btn-feedback, #right-btn-feedback {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .feedback-section button {
+      width: 60px;
+      height: 60px;
+    }
+  
+    #splash-img1 {
+      width: 350px;
+      right: -180px;
+      top: -80px;
+    }
+  
+    #splash-img2 {
+      width: 350px;
+      left: -150px;
+      bottom: -50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .feedback-section {
+      flex-direction: column;
+      padding: 60px 20px;
+    }
+  
+    .feedback-content {
+      min-height: auto;
+      padding: 40px 20px 80px;
+    }
+  
+    .feedback-img img {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .feedback-name {
+      font-size: 1.5rem;
+    }
+  
+    .feedback-text {
+      font-size: 1rem;
+      margin: 40px 10px 0 10px;
+    }
+  
+    #aspas-img {
+      width: 32px;
+      top: 30px;
+      left: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feedback-name {
+      font-size: 1.3rem;
+    }
+    .feedback-content {
+      width: 80%;
+      margin-left: 50px;
+    }
+.main-button #left-btn-feedback{
+    width: 70px;
+    height: 70px;
+
+  }
+    .feedback-role {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+  
+    .feedback-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  
+    .feedback-img img {
+      width: 70px;
+      height: 70px;
+      transform: translate(-50%, 30px);
+    }
+  
+    #splash-img1,
+    #splash-img2 {
+      display: none;
+    }
+  }

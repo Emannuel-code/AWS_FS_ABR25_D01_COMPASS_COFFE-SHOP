@@ -104,3 +104,71 @@
   .table-body tr td:first-child {
     padding-left: 20px;
   }
+
+
+  @media (max-width: 768px) {
+    .table thead tr, .table-body tr {
+      font-size: 18px;
+    }
+  
+    .table-filters button {
+      font-size: 14px;
+      height: 36px;
+      width: 100px;
+    }
+  
+    .table-body tr td {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    .table thead, .table tbody, .table tr {
+      display: block;
+      width: 100%;
+    }
+  
+    .table thead tr, .table-body tr {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .table thead tr th,
+    .table-body tr td {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 8px 16px;
+      box-sizing: border-box;
+    }
+  
+    .table-body tr {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #fddbaa;
+      background-color: #fff9f1;
+    }
+  
+    .table-filters {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 10px;
+      transform: none;
+      margin-right: 520px;
+      margin-bottom: 10px;
+    }
+  
+    .table-filters button {
+      width: 100%;
+      transform: translate(-10%, 10px);
+      max-width: 400px;
+    }
+  }

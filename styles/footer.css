@@ -75,3 +75,70 @@
   .socials i:hover {
     color: #f6b13e;
   }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 100px 40px 60px 40px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-section {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  
+    .footer-section h2.logo {
+      font-size: 40px;
+    }
+  
+    .footer-section h3 {
+      font-size: 22px;
+    }
+  
+    .footer-section ul li {
+      line-height: 32px;
+    }
+  
+    .socials a {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer {
+      padding: 80px 20px 40px 20px;
+    }
+  
+    .footer-section {
+      margin-bottom: 30px;
+    }
+
+    .footer-section .links, .company, .links {
+      display: none;
+    }
+  
+    .footer-section h2.logo {
+      font-size: 52px;
+    }
+  
+    .footer-section h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .footer-section p,
+    .footer-section ul li {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  
+    .socials a {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }

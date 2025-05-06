@@ -1,41 +1,121 @@
 .coffee-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to left, #603809, #251503);
-    flex-direction: row;
-    height: 60vh;
-    overflow: hidden;
-    font-family: "Playfair Display", normal;
-  }
-  .coffe-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #603809, #251503);
+  flex-direction: row;
+  height: auto;
+  padding: 40px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+  font-family: "Playfair Display", serif;
+}
+
+.coffe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.coffee-content h1 {
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  width: 575px;
+  color: white;
+}
+
+.coffee-content p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  max-width: 100%;
+  color: #e0d5c1;
+}
+
+.coffee-content button {
+  width: 134px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #f9c06a;
+  color: #603809;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.coffee-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  max-width: 200px;
+  width: 100%;
+}
+
+.coffee-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
   .coffee-content h1 {
-    font-size: 54px;
-    font-weight: 700;
-    margin-bottom: 22px;
-    width: 575px;
+    font-size: 2.5rem;
   }
   .coffee-content p {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 34px;
-    margin-bottom: 22px;
-    width: 409px;
+    font-size: 1rem;
   }
-  .coffee-content button{
-      width: 134px;
-      height: 48px;
-      font-size: 16px;
-      font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .coffee-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
   }
-  .coffee-image {
-    display: flex;
+
+  .coffe-content {
     align-items: center;
-    justify-content: end;
-    padding-left: 223px;
+    text-align: center;
   }
+
+  .coffee-content h1,
+  .coffee-content p {
+    width: 100%;
+  }
+
+  .coffee-content h1 {
+    font-size: 2rem;
+  }
+
+  .coffee-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .coffee-image {
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffee-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .coffee-content p {
+    font-size: 0.95rem;
+  }
+
+  .coffee-content button {
+    width: 100%;
+    max-width: 200px;
+  }
+}

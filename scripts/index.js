@@ -49,6 +49,10 @@ async function init() {
   }
 
 }
+function toggleMenu() {
+  const menu = document.querySelector("nav ul");
+  menu.classList.toggle("open");
+}
 
 document.addEventListener("DOMContentLoaded", init);
 function filterNewItems(items) {
