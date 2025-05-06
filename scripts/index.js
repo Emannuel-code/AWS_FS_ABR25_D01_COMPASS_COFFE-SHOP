@@ -2,16 +2,55 @@ async function fetchItems() {
   try {
     const response = await fetch("../data/all-items.json");
     if (!response.ok) {
-      throw new Error("Falha ao buscar os dados");
+      throw new Error("Failed to fetch data");
     }
     const data = await response.json();
     return data.data;
   } catch (error) {
-    console.error("Erro ao buscar os itens:", error);
+    console.error("Error fetching items:", error);
     return [];
   }
 }
 
+async function fetchFeedbacks() {
+  try {
+    const response = await fetch("../data/feedbacks.json");
+    if (!response.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching items:", error);
+    return [];
+  }
+}
+
+async function init() {
+  const allItems = await fetchItems();
+  const feedbacks = await fetchFeedbacks();
+
+  const newItems = filterNewItems(allItems);
+
+  createFeedbackCarousel(feedbacks);
+  createCards(newItems);
+
+  const uniqueTypes = getUniqueTypes(allItems);
+
+  createFilterButtons(uniqueTypes, allItems);
+
+  updateTable(allItems);
+
+  checkSubscriptionStatus();
+
+  const subscribeBtn = document.querySelector(".subscribe-btn");
+  if (subscribeBtn) {
+    subscribeBtn.addEventListener("click", validateAndSubscribe);
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded", init);
 function filterNewItems(items) {
   return items.filter((item) => item.is_new === true);
 }
@@ -55,63 +94,6 @@ function createCards(items) {
 function getUniqueTypes(items) {
   const types = items.map((item) => item.type);
   return ["All Items", ...new Set(types)];
-}
-
-async function fetchFeedbacks() {
-  try {
-    const response = await fetch("../data/feedbacks.json");
-    if (!response.ok) {
-      throw new Error("Falha ao buscar os dados");
-    }
-    const data = await response.json();
-    return data.data;
-  } catch (error) {
-    console.error("Erro ao buscar os itens:", error);
-    return [];
-  }
-}
-
-function createFeedbackCarousel(feedbacks) {
-  if (!feedbacks || feedbacks.length === 0) return;
-
-  const feedbackContent = document.querySelector(".feedback-content");
-  const leftButton = document.getElementById("left-btn-feedback");
-  const rightButton = document.getElementById("right-btn-feedback");
-
-  const feedbackText = feedbackContent.querySelector(".feedback-text");
-  const feedbackName = feedbackContent.querySelector(".feedback-name");
-  const feedbackRole = feedbackContent.querySelector(".feedback-role");
-  const feedbackImg = feedbackContent.querySelector(".feedback-img img");
-
-  let currentIndex = 0;
-
-  function updateFeedback() {
-    const feedback = feedbacks[currentIndex];
-
-    feedbackContent.classList.add("fade-out");
-
-    setTimeout(() => {
-      feedbackText.textContent = feedback.message;
-      feedbackName.textContent = feedback.full_name;
-      feedbackRole.textContent = feedback.profession;
-      feedbackImg.src = feedback.image_url;
-      feedbackImg.alt = feedback.full_name;
-
-      feedbackContent.classList.remove("fade-out");
-    }, 300);
-  }
-
-  leftButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + feedbacks.length) % feedbacks.length;
-    updateFeedback();
-  });
-
-  rightButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % feedbacks.length;
-    updateFeedback();
-  });
-
-  updateFeedback();
 }
 
 function createFilterButtons(types, items) {
@@ -168,6 +150,49 @@ function updateTable(items) {
 
     tableBody.appendChild(row);
   });
+}
+
+function createFeedbackCarousel(feedbacks) {
+  if (!feedbacks || feedbacks.length === 0) return;
+
+  const feedbackContent = document.querySelector(".feedback-content");
+  const leftButton = document.getElementById("left-btn-feedback");
+  const rightButton = document.getElementById("right-btn-feedback");
+
+  const feedbackText = feedbackContent.querySelector(".feedback-text");
+  const feedbackName = feedbackContent.querySelector(".feedback-name");
+  const feedbackRole = feedbackContent.querySelector(".feedback-role");
+  const feedbackImg = feedbackContent.querySelector(".feedback-img img");
+
+  let currentIndex = 0;
+
+  function updateFeedback() {
+    const feedback = feedbacks[currentIndex];
+
+    feedbackContent.classList.add("fade-out");
+
+    setTimeout(() => {
+      feedbackText.textContent = feedback.message;
+      feedbackName.textContent = feedback.full_name;
+      feedbackRole.textContent = feedback.profession;
+      feedbackImg.src = feedback.image_url;
+      feedbackImg.alt = feedback.full_name;
+
+      feedbackContent.classList.remove("fade-out");
+    }, 300);
+  }
+
+  leftButton.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + feedbacks.length) % feedbacks.length;
+    updateFeedback();
+  });
+
+  rightButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % feedbacks.length;
+    updateFeedback();
+  });
+
+  updateFeedback();
 }
 
 function validateAndSubscribe() {
@@ -267,30 +292,3 @@ function checkSubscriptionStatus() {
   }
 }
 
-
-async function init() {
-  const allItems = await fetchItems();
-  const feedbacks = await fetchFeedbacks();
-
-  const newItems = filterNewItems(allItems);
-
-  createFeedbackCarousel(feedbacks);
-  createCards(newItems);
-
-  const uniqueTypes = getUniqueTypes(allItems);
-
-  createFilterButtons(uniqueTypes, allItems);
-
-  updateTable(allItems);
-
-  checkSubscriptionStatus();
-
-  const subscribeBtn = document.querySelector(".subscribe-btn");
-  if (subscribeBtn) {
-    subscribeBtn.addEventListener("click", validateAndSubscribe);
-  }
-
-  handleHeaderScroll();
-}
-
-document.addEventListener("DOMContentLoaded", init);

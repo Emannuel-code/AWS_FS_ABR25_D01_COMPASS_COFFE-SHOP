@@ -10,7 +10,7 @@
     font-family: "Playfair Display", normal;
     cursor: pointer;
     transition: background-color 0.3s;
-    box-shadow: inset 0 0 0.7em #ffc107, 0 0 0.7em #ffc107;
+    box-shadow: inset 0 0 0.2em #ffc107, 0 0 0.2em #ffc107;
   }
   
   .main-button:hover {
